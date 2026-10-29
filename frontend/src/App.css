@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #24292c;
+  background: #f7f8f8;
+  font-synthesis: none;
+  --accent: #087c67;
+  --line: #dce2e1;
+  --muted: #64716e;
+}
+
+* { box-sizing: border-box; letter-spacing: 0; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; border: 1px solid var(--line); border-radius: 6px; background: white; color: inherit; padding: 9px 14px; font-weight: 600; }
+button:hover:not(:disabled) { background: #e8f4ef; border-color: var(--accent); }
+button:disabled { cursor: not-allowed; opacity: .5; }
+:focus-visible { outline: 3px solid #d88a30; outline-offset: 3px; }
+input { min-width: 0; width: 100%; padding: 9px 11px; border: 1px solid var(--line); border-radius: 6px; background: white; }
+h1, h2, .brand { font-family: 'Manrope', sans-serif; }
+h1 { margin: 4px 0 0; font-size: 30px; font-weight: 800; }
+h2 { font-size: 17px; margin: 0; }
+.app-header { min-height: 76px; padding: 18px max(24px, calc((100% - 1120px) / 2)); background: white; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; font-size: 23px; font-weight: 800; }
+.brand > svg { color: var(--accent); width: 29px; height: 29px; }
+.brand-label { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; border-left: 1px solid var(--line); padding-left: 16px; margin-left: 4px; color: var(--muted); }
+.environment { font-size: 12px; color: var(--muted); }
+.workspace { max-width: 1120px; margin: 0 auto; padding: 44px 24px 64px; min-height: calc(100vh - 144px); }
+.page-heading { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 36px; }
+.eyebrow { font-size: 11px; font-weight: 700; color: var(--accent); margin: 0; }
+.owner-form { width: 280px; max-width: 100%; }
+.owner-form label { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+.input-action { display: flex; gap: 8px; }
+.upload-section { padding: 25px 0 30px; border-top: 2px solid var(--accent); border-bottom: 1px solid var(--line); }
+.upload-form { display: flex; gap: 24px; align-items: center; margin-top: 18px; }
+.file-picker { display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1; background: repeating-linear-gradient(135deg, #f1f5f3, #f1f5f3 1px, #f8faf9 1px, #f8faf9 9px); border: 1px dashed #b4c6bf; padding: 22px; border-radius: 6px; }
+.file-picker > svg { flex-shrink: 0; color: var(--accent); }
+.file-picker > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.file-picker input { padding: 0; border: 0; background: transparent; font-size: 13px; }
+input::file-selector-button { font: inherit; padding: 9px 11px; margin-right: 12px; border: 1px solid var(--line); border-radius: 4px; background: white; color: #303e38; cursor: pointer; }
+.primary-button { background: var(--accent); color: white; border-color: var(--accent); display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; flex-shrink: 0; }
+.primary-button:hover:not(:disabled) { background: #096352; color: white; }
+.documents-section { margin-top: 34px; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.section-heading > div { display: flex; align-items: baseline; gap: 12px; }
+.document-count { font-size: 12px; color: var(--muted); }
+.icon-button { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; padding: 0; flex-shrink: 0; }
+.table-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; table-layout: fixed; font-size: 13px; }
+th { text-align: left; padding: 13px 14px; font-size: 11px; font-weight: 600; color: var(--muted); background: #edf1ef; border-bottom: 1px solid var(--line); }
+td { padding: 18px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th:first-child { width: 47%; }
+th:nth-child(2) { width: 14%; }
+th:nth-child(3) { width: 25%; }
+th:last-child { width: 14%; }
+tbody tr:hover { background: #f0f5f2; }
+.file-name { display: flex; align-items: center; gap: 12px; }
+.file-name svg { flex-shrink: 0; color: var(--accent); }
+.file-name span { overflow-wrap: anywhere; min-width: 0; font-weight: 500; }
+.file-size, time { color: var(--muted); }
+.download-action { text-align: right; }
+.download-action .error { text-align: left; font-size: 12px; }
+.empty-state { min-height: 210px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--muted); gap: 12px; font-size: 14px; }
+.empty-state svg { color: #7e9f91; }
+.empty-state p { margin: 0; }
+.message { font-size: 13px; margin: 14px 0 0; overflow-wrap: anywhere; }
+.error { color: #ad3131; }
+.success { color: #096352; }
+.app-footer { border-top: 1px solid var(--line); max-width: 1072px; margin: 0 auto; min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; font-size: 12px; color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.spinning { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinning { animation: none; } }
+@media (max-width: 640px) {
+  .app-header { padding: 16px 20px; flex-wrap: wrap; gap: 10px; }
+  .brand { font-size: 21px; }
+  .brand-label { font-size: 12px; }
+  .environment { font-size: 11px; }
+  .workspace { padding: 28px 20px 44px; }
+  .page-heading { flex-direction: column; align-items: stretch; gap: 22px; margin-bottom: 26px; }
+  h1 { font-size: 26px; }
+  .owner-form { width: 100%; }
+  .upload-form { flex-direction: column; align-items: stretch; gap: 14px; }
+  .file-picker { width: 100%; padding: 18px 12px; gap: 10px; }
+  .file-picker input { font-size: 12px; }
+  th, td { padding: 12px 6px; }
+  table { font-size: 12px; }
+  th:first-child { width: 43%; }
+  th:nth-child(2) { width: 16%; }
+  th:nth-child(3) { width: 26%; }
+  th:last-child { width: 15%; }
+  .file-name { gap: 6px; }
+  .file-name svg { width: 17px; }
+  .app-footer { margin: 0 20px; font-size: 11px; flex-wrap: wrap; }
+}
